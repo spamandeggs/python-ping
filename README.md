@@ -20,9 +20,9 @@ this should run on linux I didn't check yet, thanks for any feedback.
 
     # a simple 'is alive ?' one icmp request check
     from ping import IsUp
-    box = IsUp('192.168.0.254') # returns a response time or False if something is wrong 
-                                # unknown named host, no host, no socket, no network .. anything
-    if box.isup() : thisIsCool()
+    box = IsUp('192.168.0.254')
+    if box.isup() : thisIsCool() # isup() returns a response time, or False if something is wrong :
+                                 # unknown named host, no host, no socket, no network, no answer .. anything
     else : thisIsFrustrating()
 
 IsUp is a subclass of Ping
